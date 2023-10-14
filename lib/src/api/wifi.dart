@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-final isProduction = Platform.environment['IS_PRODUCTION'] == '1';
+import 'package:flutter/foundation.dart';
+
+const isProduction = true;
 
 
 Future<void> setWifi(String ssid, String password) async {
