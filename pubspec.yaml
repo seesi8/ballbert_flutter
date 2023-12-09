@@ -16,6 +16,7 @@ assets:
 dependencies:
   qr_code_scanner: ^1.0.1
   web_socket_channel: ^2.0.0 
+  uuid: ^4.0.0
   flutter:
     sdk: flutter
   flutter_localizations:

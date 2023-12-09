@@ -32,8 +32,8 @@ class _BallbertSkillAddViewState extends State<BallbertSkillAddView> {
 
   @override
   void dispose() {
-    widget.urlController.dispose();
-    widget.versionController.dispose();
+    // widget.urlController.dispose();
+    // widget.versionController.dispose();
     super.dispose();
   }
 

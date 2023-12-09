@@ -39,24 +39,28 @@ class _BallbertAddViewState extends State<BallbertAddView> {
       appBar: AppBar(
         title: const Text("Step 1"),
       ),
-      body: const Center(
+      body:  Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text('Connect to the device\'s Wi-Fi',
+            const Text('Connect to the device\'s Wi-Fi',
                 style: TextStyle(fontSize: 20)),
-            Text('Name will be: Ballbert-XXXX', style: TextStyle(fontSize: 20)),
-            Icon(
+            const Text('Name will be: Ballbert-XXXX', style: TextStyle(fontSize: 20)),
+            const Icon(
               Icons.wifi,
               size: 200,
               color: Colors.blue,
+            ),
+            ElevatedButton(onPressed: () {  
+              Navigator.of(context).pushNamed("/qr");
+            }, child: const Text("Skip Setup"),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {_checkConnection(context)},
-        child: Text("Next"),
+        child: const Text("Next"),
       ),
     );
   }

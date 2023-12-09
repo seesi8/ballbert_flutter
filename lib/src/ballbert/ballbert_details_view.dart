@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:ballbert_app/src/ballbert/ballbert_skill_add_view.dart';
 import 'package:ballbert_app/src/ballbert/ballbert_view_skills.dart';
+import 'package:ballbert_app/src/ballbert/ballbert_remove_view.dart';
 import 'package:flutter/material.dart';
 import '../database/database.dart'; // Import the Ballbert class
 import 'package:web_socket_channel/web_socket_channel.dart';
@@ -74,6 +75,8 @@ class _BallbertDetailsViewState extends State<BallbertDetailsView> {
                         snapshot: snapshot.data,
                         urlController: widget.urlController,
                         versionController: widget.versionController,),
+                    BallbertRemoveView(
+                        ballbert: widget.ballbert),
                   ];
                   return Center(
                     child: _widgetOptions.elementAt(_selectedIndex),
@@ -94,6 +97,10 @@ class _BallbertDetailsViewState extends State<BallbertDetailsView> {
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
             label: 'Add',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
         currentIndex: _selectedIndex,
